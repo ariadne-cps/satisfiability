@@ -10,12 +10,11 @@ The umbrella header is `include/ariadne-satisfiability.hpp`.
 
 ## Dependencies
 
-Satisfiability currently depends directly on:
+Satisfiability depends directly on:
 
-- [ariadne-cps/kernel](https://github.com/ariadne-cps/kernel), included as a Git submodule.
+- [ariadne-cps/symbolic](https://github.com/ariadne-cps/symbolic), included as a Git submodule.
 - [ariadne-cps/configuration](https://github.com/ariadne-cps/configuration), used for shared build configuration.
 
-The Kernel dependency is temporary while the Symbolic module is being separated. Once Symbolic is standalone, Satisfiability will depend on Symbolic instead.
 
 ## Build
 

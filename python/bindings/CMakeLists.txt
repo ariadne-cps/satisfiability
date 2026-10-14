@@ -9,7 +9,7 @@ add_library(pyariadne-satisfiability-submodule-obj OBJECT
 target_include_directories(pyariadne-satisfiability-submodule-obj PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}"
     "${PYTHON_COMMON_SOURCE_DIR}/include"
-    $<TARGET_PROPERTY:pyariadne-kernel,INTERFACE_INCLUDE_DIRECTORIES>
+    $<TARGET_PROPERTY:pyariadne-symbolic,INTERFACE_INCLUDE_DIRECTORIES>
 )
 target_link_libraries(pyariadne-satisfiability-submodule-obj PRIVATE
     pyariadne-python-common
@@ -24,9 +24,9 @@ target_sources(pyariadne-satisfiability INTERFACE
 )
 target_include_directories(pyariadne-satisfiability INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-    $<TARGET_PROPERTY:pyariadne-kernel,INTERFACE_INCLUDE_DIRECTORIES>
+    $<TARGET_PROPERTY:pyariadne-symbolic,INTERFACE_INCLUDE_DIRECTORIES>
 )
-target_link_libraries(pyariadne-satisfiability INTERFACE pyariadne-kernel)
+target_link_libraries(pyariadne-satisfiability INTERFACE pyariadne-symbolic)
 
 ariadne_add_python_module(
     NAME satisfiability

@@ -20,7 +20,7 @@ if(EXISTS "${PROJECT_SOURCE_DIR}/.git")
     require_same_dependency_commit(Configuration
         CHAINS
             "configuration"
-            "kernel|configuration"
+            "symbolic|configuration"
     )
 endif()
 
@@ -35,7 +35,7 @@ target_include_directories(satisfiability INTERFACE
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include/ariadne-satisfiability>
 )
-target_link_libraries(satisfiability INTERFACE kernel)
+target_link_libraries(satisfiability INTERFACE symbolic)
 
 add_subdirectory(src)
 target_link_libraries(SATISFIABILITY_SRC PRIVATE satisfiability)
