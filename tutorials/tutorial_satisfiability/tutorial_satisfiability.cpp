@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "ariadne-kernel.hpp"
+#include "ariadne-satisfiability.hpp"
 
 using namespace Ariadne;
 using std::cout;
